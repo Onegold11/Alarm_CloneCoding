@@ -9,6 +9,9 @@ import android.os.Build
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
 
+/**
+ * 알람을 전달받는 브로드캐스트 리시버
+ */
 class AlarmReceiver: BroadcastReceiver() {
 
     override fun onReceive(context: Context?, intent: Intent?) {
@@ -17,6 +20,9 @@ class AlarmReceiver: BroadcastReceiver() {
         this.notifyNotification(context)
     }
 
+    /**
+     * 알람 채널 생성
+     */
     private fun createNotificationChannel(context: Context?) {
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
@@ -31,6 +37,9 @@ class AlarmReceiver: BroadcastReceiver() {
         }
     }
 
+    /**
+     * 알람 표시
+     */
     private fun notifyNotification(context: Context?) {
 
         with(NotificationManagerCompat.from(context!!)) {
