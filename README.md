@@ -41,5 +41,6 @@
 
 ## Broadcast receiver
 [개발자 가이드](https://developer.android.com/guide/components/broadcasts?hl=ko)
+
 Publish–subscribe 디자인 패턴과 유사한 브로드캐스트 메시지를 받거나 보낼 수 있음
 특정 이벤트에 대한 메시지를 앱에서 처리할 수 있다.
